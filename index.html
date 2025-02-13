@@ -17,6 +17,10 @@
             background-color: lemonchiffon;
         }
 
+        p{
+            color:dimgrey;
+        }
+
         img {
             width: 260px;
             height: 260px;
@@ -36,8 +40,7 @@
     <div class="main container">
         <p>First frontend project using html, css, javascript</p>
         <p style="font-size: 25px; font-weight: bold; ">Gallery Website: my photos</p>
-        <p style="text-align: right; font-family:Tahoma,serif; font-style: italic;">A variety of cafe foods</p>
-
+        <p style="text-align: right; font-family:Tahoma,serif;">카페 신메뉴 먹어보기</p>
     </div>
     <br>
     <!--gallery-->
@@ -45,13 +48,17 @@
         <div class="image">
             <img src="images/image3.jpg" alt="image1">
             <img src="images/image2.jpg" alt="image2">
-            <img src="images/image12.jpg" alt="image3">
+            <img src="images/image19.jpg" alt="image3">
             <img src="images/image4.jpg" alt="image4">
             <img src="images/image5.jpg" alt="image5">
             <img src="images/image6.jpg" alt="image6">
             <img src="images/image7.jpg" alt="image7">
             <img src="images/image8.jpg" alt="image8">
             <img src="images/image9.jpg" alt="image9">
+            <img src="images/image16.jpg" alt="image10">
+            <img src="images/image12.jpg" alt="image11">
+            <img src="images/image14.jpg" alt="image12">
+
         </div>
     </div>
 
@@ -61,7 +68,7 @@
 
         imgs.forEach((el) => {
             el.addEventListener("click", function() {
-                window.open("images/image1.jpg",'','width:500px, height:800px')
+                window.open(this.src,'','width: 300px; height: 500px;')
             });
         });
     </script>
