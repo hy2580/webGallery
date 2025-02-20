@@ -30,6 +30,12 @@
             object-fit: cover;
         }
 
+        .image {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         img:hover {
             transform: scale(1.05);
         }
@@ -65,12 +71,10 @@
 
 
     <script>
-        const imgs = document.querySelectorAll("img");
-
-        imgs.forEach((el) => {
-            el.addEventListener("click", function() {
-                window.open(this.src,'','width: auto, height: auto')
-            });
+        document.querySelector(".image").addEventListener("click", function(event) {
+            if (event.target.tagName === "IMG") {
+                window.open(event.target.src, '', 'width=700,height=1000');
+            }
         });
     </script>
 
