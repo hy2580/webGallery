@@ -3,55 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>My Gallery</title>
-    <style>
-
-        .container {
-            text-align: center;
-            font-family: Times New Roman, sans-serif;
-
-            max-width: 90vw;
-            width: 100%;
-            padding: 10px;
-            margin: auto;
-            border: 3px solid rosybrown;
-            background-color: lemonchiffon;
-        }
-
-        p{
-            line-height:60%;
-            color:dimgrey;
-        }
-
-        img {
-            width: 260px;
-            height: 260px;
-            margin: 8px;
-            border: 3px outset lightyellow;
-            object-fit: cover;
-        }
-
-        .image {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        img:hover {
-            transform: scale(1.05);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!--main-->
-    <div class="main container">
+    <div class="main container" id="home">
         <p>First frontend project using HTML, CSS, JavaScript</p>
         <p style="font-size: 28px; font-weight: bold; color:indianred; ">Gallery Website: My photos</p>
         <p style="text-align: right; font-family:Tahoma,serif;color:black">이미지를 클릭해보세요.</p>
     </div>
+    <nav id="navbar">
+            <ul class="navbar">
+                <li>
+                    <a href="#home">
+                        <span class="material-symbols-outlined">home</span>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#gallery">
+                        <span class="material-symbols-outlined">photo</span>
+                        Gallery
+                    </a>
+                </li>
+                <li>
+                    <a href="#information">
+                        <span class="material-symbols-outlined">live_help</span>
+                        Information
+                    </a>
+                </li>
+            </ul>
+    </nav>
     <br>
+
     <!--gallery-->
-    <div class="container">
+    <div class="container" id="gallery">
         <div class="image">
             <img src="images/image3.jpg" alt="image1">
             <img src="images/image2.jpg" alt="image2">
@@ -68,7 +59,18 @@
 
         </div>
     </div>
+    <br>
+    <div class="container" id="information">
+        1.아티제  2.스타벅스  3.망고빙수
+        <br>
+        4.딸기트라이플  5.딸기케이크  6.딸기빙수
+        <br>
+        7.무화과시루  8.자몽케이크  9.런던베이글
+        <br>
+        10.뱅쇼  11.피칸파이  12.카페모카
 
+    </div>
+    <br>
 
     <script>
         document.querySelector(".image").addEventListener("click", function(event) {
@@ -76,6 +78,22 @@
                 window.open(event.target.src, '', 'width=700,height=1000');
             }
         });
+
+        window.onscroll = function() {
+            stickyNavbar();
+        };
+
+        const navbar = document.getElementById("navbar");
+        const sticky = navbar.offsetTop;
+
+        function stickyNavbar() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
     </script>
 
 </body>
