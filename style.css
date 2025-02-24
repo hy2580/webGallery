@@ -55,9 +55,16 @@ img:hover {
 }
 
 #information{
-
+    font-size:14px;
+    white-space: pre-wrap;
     font-family: "Diphylleia", serif;
     background-color: antiquewhite;
+
+}
+#information i {
+    font-weight: bold;
+    background-color:lightpink;
+    padding: 0 2px;
 }
 
 .navbar{
@@ -70,6 +77,10 @@ img:hover {
     list-style:none;
     justify-content: space-between;
 
+}
+
+.navbar a{
+    padding: 0 50px;
 }
 
 .sticky {
