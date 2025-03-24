@@ -71,8 +71,8 @@ img:hover {
     max-width: 90vw;
     padding: 10px;
     margin: auto;
-    background-color:darksalmon;
-    border: 3px solid firebrick;
+    background-color:#B5905C;
+    border: 3px solid saddlebrown;
     display:flex;
     list-style:none;
     justify-content: space-between;
